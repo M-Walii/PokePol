@@ -113,7 +113,38 @@ function QuestionGen() {
          
           <div><h4 className="questionheading" >New Pokemon Pol</h4></div>
 
+         <div className="que_div"> 
+         <input 
+         type='text'
+         placeholder="Enter Pokemon Name.."
+         onChange={e => setPokemon(e.target.value)} />
+        
+        <Button size="sm"
+         className="que_button" 
+         onClick={SubmitHandler}>Generate Poll</Button>
+        </div> 
+        <br></br>
 
+        {pokemon === '' ? null : 
+        <center>
+        <h2 className="questionheading">What is the Ability of {pokemon} ?</h2>
+        </center>} 
+        
+        <div className="poll_columns">{pokemonQuestionMap}</div>    
+        <center>
+        <NavLink to="/">
+        <Button size="sm" 
+         className="poll_button">
+         Back to Poll 
+        </Button>
+        </NavLink>
+        
+        {pokemon === '' ? null :
+        <Button size="sm" 
+          onClick={SubmitPol}>
+          Submit Poll
+        </Button>}
+        </center>
         </div>
     </>
 

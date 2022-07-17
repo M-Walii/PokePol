@@ -69,9 +69,20 @@ useEffect(() => {
   return (
 
     <div> 
-       
-          <h4 className="heading">PokePol</h4>
-        
+        <div>
+          <Row>
+          <Col> <h4 className="heading">PokePol</h4></Col>
+          <Col> 
+          <NavLink to="/question-generator">
+          <Button className="button" >Question Generator </Button>     
+          </NavLink>
+          </Col>
+          </Row>
+          </div>
+         <div className="app_columns"
+          >
+          {question}
+          </div>
         </div>
   );
 }
